@@ -1,13 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Alien Encounters Database</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <div class="upper-img">
+          <h2>Alien Encounters Database</h2>
+        </div>
+        <section class="bottom-db-search">
+          <div class="most-observations">
+            <div class="icon">
+              <img src="./public/eye.png" alt="" class="iconimg">
+            </div>
+            <h3>Most Observations</h3>
+            <p>Search for the most observed alien encounters</p>
+          </div>
+          <div class="top-locations">
+            <div class="icon">
+              <img src="./public/placeholder.png" alt="" class="iconimg">
+            </div>
+            <h3>Top Locations</h3>
+            <p>Find places with the highest UFO sightings</p>
+          </div>
+          <div class="active-species">
+            <div class="icon">
+              <img src="./public/alien.png" alt="" class="iconimg">
+            </div>
+            <h3>Active Species</h3>
+            <p>Identify species with the most interactions</p>
+          </div>
+          <div class="abduction-stats">
+            <div class="icon">
+              <img src="./public/ufo.png" alt="" class="iconimg">
+            </div>
+            <h3>Abduction Stats</h3>
+            <p>Explore data on human abductions</p>
+          </div>
+        </section>
+        <div class="slider-container">
+          <label for="myRange">How many entries to display:</label>
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+      </header>
+
+      <section class="displayed-info">
+        <div class="most-encounters-entry">
+          <div class="species-info">
+            <h3 class="name">Greys</h3>
+            <div class="qualities">
+              <p class="home-planet">Zeta Reticuli</p>
+              <p class="limbs-number">4 limbs</p>
+            </div>
+          </div>
+          <p class="observation-count">25 sightings</p>
+        </div>
+        <div class="loacation-entry">
+          <div class="location-info">
+            <h3 class="location">Roswell, NM</h3>
+          </div>
+          <p class="observation-count">18 sightings</p>
+        </div>
+        <div class="species-entry">
+          <div class="species-info">
+            <h3 class="name">Greys</h3>
+            <div class="qualities">
+              <p class="home-planet">Zeta Reticuli</p>
+              <p class="limbs-number">4 limbs</p>
+            </div>
+          </div>
+          <div class="interactions">
+            <p class="friendly">5 friendly</p>
+            <p class="hostile">12 hostile</p>
+            <p class="abductions">8 abductions</p>
+          </div>
+        </div>
+        <div class="abduction-entry">
+          <div class="abduction-info">
+            <h3 class="human-name">John Doe</h3>
+            <p class="abduction-date">2023-05-14</p>
+            <p class="abduction-type">Hostile</p>
+          </div>
+          <div class="species-info">
+            <h3 class="name">Zorgons</h3>
+            <p class="home-planet">Vega</p>
+            <p class="abductions-count">16 abductions</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
