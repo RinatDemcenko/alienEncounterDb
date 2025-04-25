@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #edf7ee;
+  color: #333;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-db-search {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .bottom-db-search > div {
+    flex: 0 0 200px;
+    padding: 10px;
+    margin: 0 20px;
+  }
+
+  .bottom-db-search h3 {
+    font-size: 1rem;
+  }
+
+  .bottom-db-search p {
+    font-size: 0.8rem;
+  }
+
+  .bottom-db-search::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bottom-db-search {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-container {
+    justify-content: center;
+    padding: 15px 10px;
+    gap: 20px;
+  }
+  
+  footer {
+    padding: 25px 0 20px;
+  }
+  
+  .kemt-logo,
+  .fei-logo,
+  .ovnership {
+    margin: 8px 0;
+    width: 180px;
+    height: 100px;
+  }
+  
+  .ovnership {
+    padding: 15px;
+  }
+  
+  .owner {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .bottom-db-search > div {
+    flex: 0 0 180px;
+    padding: 8px;
+  }
+
+  .bottom-db-search h3 {
+    font-size: 0.9rem;
+  }
+
+  .bottom-db-search p {
+    font-size: 0.75rem;
+  }
+
+  .account {
+    width: 150px;
+  }
+
+  .account-info {
+    flex-direction: column;
+  }
+
+  .account-form-container {
+    width: 90%;
+  }
+
+  .report-ufo-sighting {
+    width: 110px;
+  }
+}

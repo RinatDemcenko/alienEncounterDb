@@ -1,0 +1,118 @@
+footer {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef, #f1f3f5);
+  padding: 40px 0 30px;
+  border-top: 1px solid #dee2e6;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2d7b32, #5eb762, #2d7b32);
+}
+
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.kemt-logo,
+.fei-logo {
+  width: 220px;
+  height: 120px;
+  margin: 10px 0;
+  transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(222, 226, 230, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kemt-logo:hover,
+.fei-logo:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(45, 123, 50, 0.15);
+  border-color: rgba(94, 183, 98, 0.3);
+}
+
+.kemt-logo img,
+.fei-logo img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  display: block;
+}
+
+.ovnership {
+  width: 220px;
+  height: 120px;
+  margin: 10px 0;
+  transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  background: white;
+  padding: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid rgba(222, 226, 230, 0.7);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ovnership::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2d7b32, #5eb762, #2d7b32);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.ovnership:hover::after {
+  transform: scaleX(1);
+}
+
+.ovnership:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(45, 123, 50, 0.15);
+  border-color: rgba(94, 183, 98, 0.3);
+}
+
+.made-by {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 8px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.owner {
+  font-size: 1.3rem;
+  color: #2d7b32;
+  letter-spacing: 0.8px;
+  display: inline-block;
+}
+

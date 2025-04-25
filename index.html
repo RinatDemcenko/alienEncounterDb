@@ -1,98 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/page_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alien Encounters Database</title>
+    <title>Databáza stretnutí s mimozemšťanmi</title>
   </head>
   <body>
     <div id="app">
       <header>
-        <div class="upper-img">
-          <h2>Alien Encounters Database</h2>
-        </div>
-        <section class="bottom-db-search">
-          <div class="most-observations">
-            <div class="icon">
-              <img src="./public/eye.png" alt="" class="iconimg">
+        <section class="upper-img">
+          <nav class="menu">
+            <div class="report-ufo-sighting disabled" actionType="report">
+              <h3>Nahlásiť pozorovanie UFO</h3>
+              <img src="/report.png" alt="" class="iconimg" />
             </div>
-            <h3>Most Observations</h3>
-            <p>Search for the most observed alien encounters</p>
-          </div>
-          <div class="top-locations">
-            <div class="icon">
-              <img src="./public/placeholder.png" alt="" class="iconimg">
+            <div class="account">
+              <div class="account-info">
+                <div class="info">
+                  <h3 class="user-name">Nie je prihlášený</h3>
+                  <p class="user-email">nie je prihlášený</p>
+                </div>
+                <img src="/account.png" alt="" />
+              </div>
+              <div class="account-managment-buttons">
+                <button class="login-btn" actionType = "login">Prihlásiť sa</button>
+                <button class="signup-btn" actionType = "signUp">Zaregistrovať sa</button>
+                <button class="logout-btn disabled" actionType = "logout">Odhlásiť sa</button>
+              </div>
             </div>
-            <h3>Top Locations</h3>
-            <p>Find places with the highest UFO sightings</p>
-          </div>
-          <div class="active-species">
-            <div class="icon">
-              <img src="./public/alien.png" alt="" class="iconimg">
-            </div>
-            <h3>Active Species</h3>
-            <p>Identify species with the most interactions</p>
-          </div>
-          <div class="abduction-stats">
-            <div class="icon">
-              <img src="./public/ufo.png" alt="" class="iconimg">
-            </div>
-            <h3>Abduction Stats</h3>
-            <p>Explore data on human abductions</p>
+          </nav>
+          <div class="title">
+            <h2>Databáza stretnutí s mimozemšťanmi</h2>
           </div>
         </section>
+        <section class="bottom-db-search">
+          <div class="most-observations option">
+            <div class="icon">
+              <img src="/eye.png" alt="" class="iconimg" />
+            </div>
+            <h3>Najčastejšie pozorovania</h3>
+            <p>Druhy mimozemšťanov zoradené v abecednom poradí</p>
+          </div>
+          <div class="top-locations option">
+            <div class="icon">
+              <img src="/location.png" alt="" class="iconimg" />
+            </div>
+            <h3>Najlepšie lokality</h3>
+            <p>Miesta zoradené podľa celkového počtu pozorovaní</p>
+          </div>
+          <div class="active-species option">
+            <div class="icon">
+              <img src="/alien.png" alt="" class="iconimg" />
+            </div>
+            <h3>Aktívne druhy</h3>
+            <p>Druhy s počtom interakcií a štatistikou priateľských kontaktov</p>
+          </div>
+          <div class="abduction-stats option">
+            <div class="icon">
+              <img src="/ufo.png" alt="" class="iconimg" />
+            </div>
+            <h3>Štatistiky únosov</h3>
+            <p>Záznamy o únosoch s menami ľudí a informáciami o únoscoch</p>
+          </div>
+        </section>
+        <div class="search-options">
+          <select id="order-select">
+            <option value="ASC">Vzostupný</option>
+            <option value="DESC">Zostupný</option>
+          </select>
+          <button class="set-defaults">Nastaviť predvolené</button>
+        </div>
         <div class="slider-container">
-          <label for="myRange">How many entries to display:</label>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <label for="myRange">Koľko záznamov zobraziť:</label>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="25"
+            class="slider"
+            id="myRange"
+          />
+          <p class="slider-value">25</p>
         </div>
       </header>
-
-      <section class="displayed-info">
-        <div class="most-encounters-entry">
-          <div class="species-info">
-            <h3 class="name">Greys</h3>
-            <div class="qualities">
-              <p class="home-planet">Zeta Reticuli</p>
-              <p class="limbs-number">4 limbs</p>
-            </div>
-          </div>
-          <p class="observation-count">25 sightings</p>
+      <main>
+        <div class="form-container" id="account-form-container">
+          <form class="form" actionType="login" id="account-form">
+            <input type="text" placeholder="Meno učtu" id="username" />
+            <input type="text" placeholder="Email" id="email" />
+            <input type="password" placeholder="Heslo" id="password" />
+            <input
+              type="password"
+              placeholder="Zopakujte heslo"
+              id="confirm-password"
+              hidden
+            />
+            <button class="login-btn">Prihlásiť</button>
+          </form>
         </div>
-        <div class="loacation-entry">
-          <div class="location-info">
-            <h3 class="location">Roswell, NM</h3>
-          </div>
-          <p class="observation-count">18 sightings</p>
+        
+        <div class="form-container" id="report-form-container">
+          <form class="form" actionType="report" id="report-form">
+            <h3>Nahlásiť pozorovanie UFO</h3>
+            <input type="text" placeholder="Lokácia stretnutia" id="location" required />
+            <select id="ship-type" required>
+              <option value="" disabled selected>Vyberte typ lode</option>
+              <option value="kupola">Kupola</option>
+              <option value="tanier">Tanier</option>
+              <option value="bojová loď">Bojová loď</option>
+              <option value="materská loď">Materská loď</option>
+              <option value="krížnik">Krížnik</option>
+            </select>
+            <input type="date" id="encounter-date" required />
+            <button class="submit-report-btn">Odoslať hlásenie</button>
+            <button type="button" class="close-btn">&times;</button>
+          </form>
         </div>
-        <div class="species-entry">
-          <div class="species-info">
-            <h3 class="name">Greys</h3>
-            <div class="qualities">
-              <p class="home-planet">Zeta Reticuli</p>
-              <p class="limbs-number">4 limbs</p>
-            </div>
+        <section class="displayed-info"></section>
+      </main>
+      <footer>
+        <div class="footer-container">
+          <div class="kemt-logo">
+            <img src="kemt_logo.png" alt="KEMT Logo" />
           </div>
-          <div class="interactions">
-            <p class="friendly">5 friendly</p>
-            <p class="hostile">12 hostile</p>
-            <p class="abductions">8 abductions</p>
+          <div class="ovnership">
+            <h3 class="made-by">Autor:</h3>
+            <p class="owner">Rinat Demchenko</p>
           </div>
-        </div>
-        <div class="abduction-entry">
-          <div class="abduction-info">
-            <h3 class="human-name">John Doe</h3>
-            <p class="abduction-date">2023-05-14</p>
-            <p class="abduction-type">Hostile</p>
-          </div>
-          <div class="species-info">
-            <h3 class="name">Zorgons</h3>
-            <p class="home-planet">Vega</p>
-            <p class="abductions-count">16 abductions</p>
+          <div class="fei-logo">
+            <img src="/fei_logo.png" alt="FEI Logo" />
           </div>
         </div>
-      </section>
+      </footer>
     </div>
+
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/accountSystem.js"></script>
   </body>
 </html>

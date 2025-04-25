@@ -1,0 +1,120 @@
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.form {
+  background: linear-gradient(145deg, #ffffff, #e6f7e8);
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateY(20px);
+}
+
+.form input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: #5eb762;
+  box-shadow: 0 0 0 2px rgba(94, 183, 98, 0.2);
+}
+
+.form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #5eb762;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.form button:hover {
+  background: #2d7b32;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#report-form-container .form {
+  width: 400px;
+}
+
+#report-form-container .form h3 {
+  color: #2d7b32;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+#report-form-container .form input,
+#report-form-container .form select {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  outline: none;
+  width: 100%;
+}
+
+#report-form-container .form input:focus,
+#report-form-container .form select:focus {
+  border-color: #5eb762;
+  box-shadow: 0 0 0 2px rgba(94, 183, 98, 0.2);
+}
+
+#report-form-container .form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #5eb762;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+
+#report-form-container .form button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#report-form-container .form .close-btn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 1.5rem;
+  background: none;
+  box-shadow: none;
+  color: #666;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#report-form-container .form .close-btn:hover {
+  color: #2d7b32;
+  transform: rotate(90deg);
+}

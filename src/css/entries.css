@@ -1,0 +1,192 @@
+.displayed-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  min-height: 300px;
+  background-color: #edf7ee;
+}
+
+.entry {
+  width: 250px;
+  height: 175px;
+  background: linear-gradient(145deg, #ffffff, #e6f7e8);
+  text-align: center;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.entry:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #e9ffe9, #cef5d4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.alien-name,
+.human-name,
+.location {
+  font-size: 1.3rem;
+  color: #2d7b32;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.home-planet,
+.limbs-number,
+.abduction-date,
+.abduction-type,
+.abductions-count {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+.observation-count {
+  font-size: 1rem;
+  color: #2d7b32;
+  margin-top: 10px;
+}
+
+.most-encounters-entry,
+.loacation-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.species-entry {
+  display: grid;
+  grid-template-rows: 6fr 1fr;
+  gap: 5px;
+  width: 310px;
+  justify-content: center;
+}
+
+.interactions {
+  display: grid;
+  min-width: 200px;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.85rem;
+}
+
+.friendly {
+  color: #5eb762;
+}
+
+.hostile {
+  color: #d32f2f;
+}
+
+.total {
+  color: #1976d2;
+}
+
+.abduction-entry {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.abduction-entry:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #e9ffe9, #cef5d4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.human-name {
+  font-size: 1.2rem;
+  color: #2d7b32;
+  margin-bottom: 10px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.abduction-date,
+.abduction-type {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+  text-align: left;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.abduction-entry .alien-name {
+  font-size: 1.1rem;
+  color: #5eb762;
+  margin-bottom: 10px;
+  text-align: right;
+  word-break: break-word;
+}
+
+.abduction-entry .home-planet {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: right;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.alien-name::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url("/alien.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
+.location::before {
+  content: "📍";
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.home-planet::before {
+  content: "🪐";
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.human-name::before {
+  content: "👤";
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.limbs-number::before {
+  content: "🦵";
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+.abductions-count::before {
+  content: "🛸";
+  margin-left: 8px;
+  margin-right: 3px;
+  font-size: 1.1em;
+}
+
+.abduction-date::after {
+  content: "📅";
+  margin-left: 8px;
+  font-size: 1.1em;
+}
+
+.abduction-type::after {
+  content: "⚠️";
+  margin-left: 8px;
+  font-size: 1.1em;
+}

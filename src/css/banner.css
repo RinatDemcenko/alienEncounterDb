@@ -1,0 +1,161 @@
+header {
+  position: relative;
+}
+
+.upper-img {
+  background-image: url("/ufoImage.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 550px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 20px;
+  width: 90%;
+  z-index: 10;
+}
+
+.title {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+  z-index: 5;
+}
+
+.upper-img h2 {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: clamp(30px, 5vw, 50px);
+}
+
+.account {
+  background: linear-gradient(145deg, #ffffff, #e6f7e8);
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.account:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.account-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.account-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #5eb762;
+}
+
+.info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  color: #2d7b32;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email {
+  font-size: 0.75rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+
+.account-managment-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-managment-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #5eb762;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-managment-buttons button:hover {
+  background: #2d7b32;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.account-managment-buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.report-ufo-sighting {
+  background: linear-gradient(145deg, #ffffff, #e6f7e8);
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-ufo-sighting:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.report-ufo-sighting h3 {
+  font-size: 1.1rem;
+  color: #2d7b32;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.report-ufo-sighting .iconimg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.report-ufo-sighting:hover .iconimg {
+  transform: translateY(-3px) rotate(15deg);
+}
