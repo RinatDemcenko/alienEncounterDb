@@ -5,65 +5,137 @@
     <link rel="icon" type="image/svg+xml" href="/alienEncounterDb/page_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Databáza stretnutí s mimozemšťanmi</title>
-    <script type="module" crossorigin src="/alienEncounterDb/assets/index-8JfYAgQ5.js"></script>
-    <link rel="stylesheet" crossorigin href="/alienEncounterDb/assets/index-DfrcumxE.css">
+    <script type="module" crossorigin src="/alienEncounterDb/assets/index-DLh8fxiy.js"></script>
+    <link rel="stylesheet" crossorigin href="/alienEncounterDb/assets/index-Dm7d3wu-.css">
   </head>
   <body>
     <div id="app">
       <header>
-        <div class="upper-img">
-          <div class="logos">
-            <div class="kemt-logo">
-              <img src="kemt_logo.png" alt="">
+        <section class="upper-img">
+          <nav class="menu">
+            <div class="report-ufo-sighting disabled" actionType="report">
+              <h3>Nahlásiť pozorovanie UFO</h3>
+              <img src="/alienEncounterDb/report.png" alt="" class="iconimg" />
             </div>
-            <div class="fei-logo">
-              <img src="/alienEncounterDb/fei_logo.png" alt="">
+            <div class="account">
+              <div class="account-info">
+                <div class="info">
+                  <h3 class="user-name">Nie je prihlášený</h3>
+                  <p class="user-email">nie je prihlášený</p>
+                </div>
+                <img src="/alienEncounterDb/account.png" alt="" />
+              </div>
+              <div class="account-managment-buttons">
+                <button class="login-btn" actionType = "login">Prihlásiť sa</button>
+                <button class="signup-btn" actionType = "signUp">Zaregistrovať sa</button>
+                <button class="logout-btn disabled" actionType = "logout">Odhlásiť sa</button>
+              </div>
             </div>
-          </div>
+          </nav>
           <div class="title">
             <h2>Databáza stretnutí s mimozemšťanmi</h2>
           </div>
-        </div>
+        </section>
         <section class="bottom-db-search">
           <div class="most-observations option">
             <div class="icon">
-              <img src="/alienEncounterDb/eye.png" alt="" class="iconimg">
+              <img src="/alienEncounterDb/eye.png" alt="" class="iconimg" />
             </div>
             <h3>Najčastejšie pozorovania</h3>
-            <p>Vyhľadajte najčastejšie stretnutia s mimozemšťanmi</p>
+            <p>Druhy mimozemšťanov zoradené v abecednom poradí</p>
           </div>
           <div class="top-locations option">
             <div class="icon">
-              <img src="/alienEncounterDb/location.png" alt="" class="iconimg">
+              <img src="/alienEncounterDb/location.png" alt="" class="iconimg" />
             </div>
             <h3>Najlepšie lokality</h3>
-            <p>Nájdite miesta s najvyšším počtom pozorovaní UFO</p>
+            <p>Miesta zoradené podľa celkového počtu pozorovaní</p>
           </div>
           <div class="active-species option">
             <div class="icon">
-              <img src="/alienEncounterDb/alien.png" alt="" class="iconimg">
+              <img src="/alienEncounterDb/alien.png" alt="" class="iconimg" />
             </div>
             <h3>Aktívne druhy</h3>
-            <p>Identifikujte druhy s najvyšším počtom interakcií</p>
+            <p>Druhy s počtom interakcií a štatistikou priateľských kontaktov</p>
           </div>
           <div class="abduction-stats option">
             <div class="icon">
-              <img src="/alienEncounterDb/ufo.png" alt="" class="iconimg">
+              <img src="/alienEncounterDb/ufo.png" alt="" class="iconimg" />
             </div>
             <h3>Štatistiky únosov</h3>
-            <p>Preskúmajte údaje o únosoch ľudí</p>
+            <p>Záznamy o únosoch s menami ľudí a informáciami o únoscoch</p>
           </div>
         </section>
+        <div class="search-options">
+          <select id="order-select">
+            <option value="ASC">Vzostupný</option>
+            <option value="DESC">Zostupný</option>
+          </select>
+          <button class="set-defaults">Nastaviť predvolené</button>
+        </div>
         <div class="slider-container">
           <label for="myRange">Koľko záznamov zobraziť:</label>
-          <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="25"
+            class="slider"
+            id="myRange"
+          />
           <p class="slider-value">25</p>
         </div>
       </header>
-
-      <section class="displayed-info">
+      <main>
+        <div class="form-container" id="account-form-container">
+          <form class="form" actionType="login" id="account-form">
+            <input type="text" placeholder="Meno učtu" id="username" />
+            <input type="text" placeholder="Email" id="email" />
+            <input type="password" placeholder="Heslo" id="password" />
+            <input
+              type="password"
+              placeholder="Zopakujte heslo"
+              id="confirm-password"
+              hidden
+            />
+            <button class="login-btn">Prihlásiť</button>
+          </form>
+        </div>
         
-      </section>
+        <div class="form-container" id="report-form-container">
+          <form class="form" actionType="report" id="report-form">
+            <h3>Nahlásiť pozorovanie UFO</h3>
+            <input type="text" placeholder="Lokácia stretnutia" id="location" required />
+            <select id="ship-type" required>
+              <option value="" disabled selected>Vyberte typ lode</option>
+              <option value="kupola">Kupola</option>
+              <option value="tanier">Tanier</option>
+              <option value="bojová loď">Bojová loď</option>
+              <option value="materská loď">Materská loď</option>
+              <option value="krížnik">Krížnik</option>
+            </select>
+            <input type="date" id="encounter-date" required />
+            <button class="submit-report-btn">Odoslať hlásenie</button>
+            <button type="button" class="close-btn">&times;</button>
+          </form>
+        </div>
+        <section class="displayed-info"></section>
+      </main>
+      <footer>
+        <div class="footer-container">
+          <div class="kemt-logo">
+            <img src="kemt_logo.png" alt="KEMT Logo" />
+          </div>
+          <div class="ovnership">
+            <h3 class="made-by">Autor:</h3>
+            <p class="owner">Rinat Demchenko</p>
+          </div>
+          <div class="fei-logo">
+            <img src="/alienEncounterDb/fei_logo.png" alt="FEI Logo" />
+          </div>
+        </div>
+      </footer>
     </div>
+
   </body>
 </html>
