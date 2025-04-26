@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/alienEncounterDb/page_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Databáza stretnutí s mimozemšťanmi</title>
-    <script type="module" crossorigin src="/alienEncounterDb/assets/index-DLh8fxiy.js"></script>
-    <link rel="stylesheet" crossorigin href="/alienEncounterDb/assets/index-Dm7d3wu-.css">
+    <script type="module" crossorigin src="/alienEncounterDb/assets/index-CmgEgUq7.js"></script>
+    <link rel="stylesheet" crossorigin href="/alienEncounterDb/assets/index-Djwo-kWc.css">
   </head>
   <body>
     <div id="app">
@@ -26,9 +26,15 @@
                 <img src="/alienEncounterDb/account.png" alt="" />
               </div>
               <div class="account-managment-buttons">
-                <button class="login-btn" actionType = "login">Prihlásiť sa</button>
-                <button class="signup-btn" actionType = "signUp">Zaregistrovať sa</button>
-                <button class="logout-btn disabled" actionType = "logout">Odhlásiť sa</button>
+                <button class="login-btn" actionType="login">
+                  Prihlásiť sa
+                </button>
+                <button class="signup-btn" actionType="signUp">
+                  Zaregistrovať sa
+                </button>
+                <button class="logout-btn disabled" actionType="logout">
+                  Odhlásiť sa
+                </button>
               </div>
             </div>
           </nav>
@@ -56,7 +62,9 @@
               <img src="/alienEncounterDb/alien.png" alt="" class="iconimg" />
             </div>
             <h3>Aktívne druhy</h3>
-            <p>Druhy s počtom interakcií a štatistikou priateľských kontaktov</p>
+            <p>
+              Druhy s počtom interakcií a štatistikou priateľských kontaktov
+            </p>
           </div>
           <div class="abduction-stats option">
             <div class="icon">
@@ -98,14 +106,20 @@
               id="confirm-password"
               hidden
             />
+            <button type="button" class="close-btn">&times;</button>
             <button class="login-btn">Prihlásiť</button>
           </form>
         </div>
-        
+
         <div class="form-container" id="report-form-container">
           <form class="form" actionType="report" id="report-form">
             <h3>Nahlásiť pozorovanie UFO</h3>
-            <input type="text" placeholder="Lokácia stretnutia" id="location" required />
+            <input
+              type="text"
+              placeholder="Lokácia stretnutia"
+              id="location"
+              required
+            />
             <select id="ship-type" required>
               <option value="" disabled selected>Vyberte typ lode</option>
               <option value="kupola">Kupola</option>
