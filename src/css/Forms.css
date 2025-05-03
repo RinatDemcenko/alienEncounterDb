@@ -118,3 +118,20 @@
   color: #2d7b32;
   transform: rotate(90deg);
 }
+
+#account-form-container .form .close-btn {
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  font-size: 1.5rem;
+  background: none;
+  box-shadow: none;
+  color: #666;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#account-form-container .form .close-btn:hover {
+  color: #2d7b32;
+  transform: rotate(90deg);
+}

@@ -24,14 +24,15 @@ const encounterDateInput = reportForm.querySelector("#encounter-date");
 const submitReportBtn = reportForm.querySelector(".submit-report-btn");
 
 const accountFormContainer = document.querySelector("#account-form-container");
+const accountFormCloseBtn = accountFormContainer.querySelector(".close-btn");
 const accountForm = accountFormContainer.querySelector("#account-form");
-const accountFormSubmitBtn = accountForm.querySelector("button");
+const accountFormSubmitBtn = accountForm.querySelector(".login-btn");
 const usernameInput = accountForm.querySelector("#username");
 const emailInput = accountForm.querySelector("#email");
 const passwordInput = accountForm.querySelector("#password");
 const confirmPasswordInput = accountForm.querySelector("#confirm-password");
 
-//! Account form
+//! Account
 function updateAccountFormState(actionType) {
   if (actionType === "login") {
     usernameInput.hidden = true;
@@ -59,6 +60,7 @@ function showAccountForm(actionType) {
 function hideAccountForm() {
   accountFormContainer.style.display = "none";
   document.body.style.overflow = "auto";
+  accountForm.reset();
 }
 
 function saveUser(user) {
@@ -70,6 +72,8 @@ accountManagementButtons.forEach((button) => {
     showAccountForm(e.target.getAttribute("actionType"));
   });
 });
+
+accountFormCloseBtn.addEventListener("click", hideAccountForm);
 
 function updateAccountInfo(user) {
   nameDisplay.textContent = user.username;
@@ -177,7 +181,7 @@ accountFormSubmitBtn.addEventListener("click", function (e) {
 
 logoutBtn.addEventListener("click", handleLogout);
 
-//! Report form
+//! Report
 
 function showReportForm(actionType) {
   reportFormContainer.style.display = "flex";

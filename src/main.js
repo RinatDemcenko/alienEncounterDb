@@ -17,7 +17,6 @@ const options = document.querySelectorAll(".option");
 const orderSelect = document.querySelector("#order-select");
 const setDefaultsBtn = document.querySelector(".set-defaults");
 
-
 const currentUrl = window.location.href;
 let baseUrl = "https://alien-encounterdb-server.vercel.app";
 if (currentUrl.includes("localhost")) {
@@ -43,7 +42,7 @@ function refreshQueries() {
   if (["ASC", "DESC"].includes(order)) {
     params.push(`order=${order}`);
   }
-  if (limit > 0 && limit < 100) {
+  if (limit > 0 && limit < 101) {
     params.push(`limit=${limit}`);
   }
 
@@ -58,8 +57,8 @@ limitslider.addEventListener("input", (event) => {
 });
 
 orderSelect.addEventListener("input", () => {
-  order = orderSelect.value
-  console.log(order)
+  order = orderSelect.value;
+  console.log(order);
   console.log(refreshQueries());
 });
 
@@ -67,28 +66,28 @@ setDefaultsBtn.addEventListener("click", () => {
   if (!isDefaultMode) {
     savedLimit = limitslider.value;
     savedOrder = orderSelect.value.toLowerCase();
-    
+
     limit = 0;
     order = "-";
-    
+
     limitslider.classList.add("disabled");
     orderSelect.classList.add("disabled");
-    
+
     setDefaultsBtn.textContent = "Obnoviť nastavenia";
-    
+
     isDefaultMode = true;
   } else {
     limit = savedLimit;
     order = savedOrder;
-    
+
     limitslider.classList.remove("disabled");
     orderSelect.classList.remove("disabled");
-    
+
     sliderValue.innerHTML = `${limit}`;
     limitslider.value = limit;
     orderSelect.value = order.toUpperCase();
     setDefaultsBtn.textContent = "Nastaviť predvolené";
-    
+
     isDefaultMode = false;
   }
 });
@@ -97,7 +96,7 @@ mostObservations.addEventListener("click", async () => {
   const response = await axios.get(
     `${baseUrl}/api/mostObserved${refreshQueries()}`
   );
-  console.log(`${baseUrl}/api/mostObserved${refreshQueries()}`)
+  console.log(`${baseUrl}/api/mostObserved${refreshQueries()}`);
   dataDisplay.innerHTML = "";
   for (let species of response.data) {
     let entry = document.createElement("div");
@@ -129,6 +128,7 @@ mostVisited.addEventListener("click", async () => {
         <h3 class="location">${location.location_name}</h3>
       </div>
       <p class="observation-count">${location.total_observations} pozorovaní</p>
+      <p class="unique-species">${location.unique_species_count} unikátnych druhov</p>
     `;
     dataDisplay.appendChild(entry);
   }
@@ -183,5 +183,3 @@ recentAbductions.addEventListener("click", async () => {
     dataDisplay.appendChild(entry);
   }
 });
-
-

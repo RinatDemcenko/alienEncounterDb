@@ -24,9 +24,15 @@
                 <img src="/account.png" alt="" />
               </div>
               <div class="account-managment-buttons">
-                <button class="login-btn" actionType = "login">Prihlásiť sa</button>
-                <button class="signup-btn" actionType = "signUp">Zaregistrovať sa</button>
-                <button class="logout-btn disabled" actionType = "logout">Odhlásiť sa</button>
+                <button class="login-btn" actionType="login">
+                  Prihlásiť sa
+                </button>
+                <button class="signup-btn" actionType="signUp">
+                  Zaregistrovať sa
+                </button>
+                <button class="logout-btn disabled" actionType="logout">
+                  Odhlásiť sa
+                </button>
               </div>
             </div>
           </nav>
@@ -40,7 +46,7 @@
               <img src="/eye.png" alt="" class="iconimg" />
             </div>
             <h3>Najčastejšie pozorovania</h3>
-            <p>Druhy mimozemšťanov zoradené v abecednom poradí</p>
+            <p>Najčastejšie pozorovane druhy zoradené v abecednom poradí</p>
           </div>
           <div class="top-locations option">
             <div class="icon">
@@ -54,7 +60,9 @@
               <img src="/alien.png" alt="" class="iconimg" />
             </div>
             <h3>Aktívne druhy</h3>
-            <p>Druhy s počtom interakcií a štatistikou priateľských kontaktov</p>
+            <p>
+              Druhy s počtom interakcií a štatistikou priateľských kontaktov
+            </p>
           </div>
           <div class="abduction-stats option">
             <div class="icon">
@@ -66,8 +74,8 @@
         </section>
         <div class="search-options">
           <select id="order-select">
-            <option value="ASC">Vzostupný</option>
             <option value="DESC">Zostupný</option>
+            <option value="ASC">Vzostupný</option>
           </select>
           <button class="set-defaults">Nastaviť predvolené</button>
         </div>
@@ -96,14 +104,20 @@
               id="confirm-password"
               hidden
             />
+            <button type="button" class="close-btn">&times;</button>
             <button class="login-btn">Prihlásiť</button>
           </form>
         </div>
-        
+
         <div class="form-container" id="report-form-container">
           <form class="form" actionType="report" id="report-form">
             <h3>Nahlásiť pozorovanie UFO</h3>
-            <input type="text" placeholder="Lokácia stretnutia" id="location" required />
+            <input
+              type="text"
+              placeholder="Lokácia stretnutia"
+              id="location"
+              required
+            />
             <select id="ship-type" required>
               <option value="" disabled selected>Vyberte typ lode</option>
               <option value="kupola">Kupola</option>

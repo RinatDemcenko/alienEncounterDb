@@ -38,7 +38,8 @@
 .limbs-number,
 .abduction-date,
 .abduction-type,
-.abductions-count {
+.abductions-count,
+.unique-species  {
   font-size: 0.95rem;
   color: #555;
   font-style: italic;
@@ -46,7 +47,7 @@
   margin: 6px 0;
 }
 
-.observation-count {
+.observation-count{
   font-size: 1rem;
   color: #2d7b32;
   margin-top: 10px;
