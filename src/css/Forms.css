@@ -49,6 +49,10 @@
   margin-top: 10px;
 }
 
+select, option {
+  background:white;
+}
+
 .form button:hover {
   background: #2d7b32;
   transform: translateY(-2px);
