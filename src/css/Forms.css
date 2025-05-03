@@ -81,11 +81,6 @@
   width: 100%;
 }
 
-#report-form-container .form input:focus,
-#report-form-container .form select:focus {
-  border-color: #5eb762;
-  box-shadow: 0 0 0 2px rgba(94, 183, 98, 0.2);
-}
 
 #report-form-container .form button {
   padding: 12px;
